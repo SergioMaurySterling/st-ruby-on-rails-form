@@ -11,4 +11,8 @@ class ReportsController < ApplicationController
     @credentials = Rails.application.credentials.hello
     @variable = Pet.first.name
   end
+  def riding
+    @credentials = Rails.application.credentials.hello
+    @variable = Pet.first.name
+  end
 end

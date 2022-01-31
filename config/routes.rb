@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'hola', to: 'reports#hello'
   get 'customer', to: 'reports#customer'
   get 'service', to: 'reports#service'
+  get 'riding', to: 'reports#riding'
 end
