@@ -51,8 +51,9 @@
     text-align: center;
   }
 
-  .header img {
-    height: 34px;
+  .logo {
+    height: 40px;
+    width: 200px;
   }
 
   header.sub-header {
@@ -710,7 +711,7 @@
   .wrapper#formConfirmation{"style"=>"background-color:#ffffff"}
     .container{'ng-repeat'=>'mpi in ro.mpi_reports'}
       %header.header
-        %img{'ng-src'=>'{{ro.dealer.dealer_logo}}', "crossorigin"=>"anonymous"}
+        =image_tag "jd.png", class: 'logo'
       %header.sub-header
         %h3 Service Inspection Checklist
       %header.sub-header
