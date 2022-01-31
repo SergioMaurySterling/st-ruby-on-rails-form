@@ -712,89 +712,39 @@
       %header.header
         %img{'ng-src'=>'{{ro.dealer.dealer_logo}}', "crossorigin"=>"anonymous"}
       %header.sub-header
-        %h3 Rivers Equipment, LLC Ready-To-Run inspection Report
-        .flex-row
-          %h5 {{ro.dealer.dba}}
+        %h3 Service Inspection Checklist
+      %header.sub-header
+        %h3 Compact Utility Tractor
+        %h3 (650 thru 1050 / 655 thru 955 / 670 thru 1070)
+
       / address begin
       .container
         .row
           .form-group-sm.col
-            %label{:for => 'date'} Date:
-            %input.app-name{:name => 'date', :type => 'text', :value => ''}/
+            %label{:for => 'customer'} Customer:
+            %input.app-name{:name => 'customer', :type => 'text', :value => ''}/
           .form-group-sm.col
-            %label{:for => 'manufacter-model'} Manufacter Model:
-            %input.app-ro-num{:name => 'manufacter-model', :type => 'text', :value => ''}/
+            %label{:for => 'date'} Date:
+            %input.app-ro-num{:name => 'date', :type => 'text', :value => ''}/
         .row
           .form-group-sm.col
-            %label{:for => 'customer'} Customer:
-            %input.app-name{:name => 'customer', :type => 'text', :value => '{{ro.customer.name}}'}/
+            %label{:for => 'address'} Address:
+            %input.app-name{:name => 'address', :type => 'text', :value => '{{ro.address.name}}'}/
           .form-group-sm.col
-            %label{:for => 'serial-number'} Serial Number:
-            %input.app-ro-num{:name => 'serial-number', :type => 'text', :value => ''}/
+            %label{:for => 'number'} Phone:
+            %input.app-ro-num{:name => 'number', :type => 'text', :value => ''}/
           .form-group-sm.col
             %label{:for => 'hours'} Hours:
             %input.app-ro-num{:name => 'hours', :type => 'text', :value => ''}/
-        .row{"style"=>"width: 300px; padding-top:5px"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              PM Due:
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Unkown
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              None required
-        .row{"style"=>"width: 300px; padding-top:5px"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Undercarriage:
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Good
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Fair
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Poor
-        .row{"style"=>"width: 300px; padding-top:5px"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Track Sag:
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Good
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Loose / Tight
-        .row{"style"=>"width: 300px; padding-top:5px"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Leaks:
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Track / Carrier Roller
-          .col-space
-            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-          .col-space{"style"=>"width: 100px; padding-top:5px"}
-            %span
-              Track Seals
+          .form-group-sm.col
+            %label{:for => 'pin'} Pin:
+            %input.app-ro-num{:name => 'pin', :type => 'text', :value => ''}/
+          .form-group-sm.col
+            %label{:for => 'expires'} Expires:
+            %input.app-ro-num{:name => 'expires', :type => 'text', :value => ''}/
+          .form-group-sm.col
+            %label{:for => 'model'} Model:
+            %input.app-ro-num{:name => 'model', :type => 'text', :value => ''}/
           -# .form-group-sm.col
           -#   %label{:for => 'key-trac'} RO #:
           -#   %input.app-ro-num{:name => 'key-trac', :type => 'text', :value => '{{ro.dms_unique_id}}'}/
@@ -814,29 +764,13 @@
         -#   .form-group-sm.col
         -#     %label{:for => 'vin'} VIN:
         -#     %input.app-vin{:name => 'vin', :type => 'text', :value => '{{ro.vehicle.vin}}'}/
-      / address end
-      / legend
-      .legend
-        .row
-          .col-xs-4
-            .row
-              %i.status.red.fa.fa-check
-              %span NA = Needs Attention
-          .col-xs-4
-            .row
-              %i.status.yellow
-              %span Not Applicable
-          .col-xs-4
-            .row
-              %i.status.green
-              %span O = Passed
-      / end legend
+
       .container
         .row
           .col
             .row
               .panel.panel-primary
-                .panel-heading GENERAL
+                .panel-heading ENGINE
                 .panel-body
                   .row
                     %table.table.lights
@@ -845,421 +779,262 @@
                           %td
                             .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
                               .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
                                     %span
-                                      NA
+                                      Not OK
                                     %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G1 Sheet Metal
+                                      OK
                               .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G2 Doors
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Intake system
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G3 Glass Mirros
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
                                 %span
-                                  G4 Operator's Station
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G5 Seat Belt
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G7 ROPS / FOPS
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G8 Bucket(s) / Blade
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G9 Cutting Edge / Teeth
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G10 Articulation Joint
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  G11 Machine PM'd properly?
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                                  Hose tightness
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
 
-            .row
-              .panel.panel-primary
-                .panel-heading ELECTRICAL
-                .panel-body
-                  .row
-                    %table.table.lights
-                      %tbody
-                        %tr
-                          %td
-                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
-                                    %span
-                                      NA
-                                    %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  E1 Battery Condition
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  E2 Cables / Harnesses
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
                                 %span
-                                  E3 Starter/Safety Cover
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  E4 Neutral Start
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  E5 Charging System
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  E6 Gauges
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  E7 Backup Alarm
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  E8 Lights / Turns Signals
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                                  Air filter
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
 
-            .row
-              .panel.panel-primary
-                .panel-heading HYDRAULIC SYSTEM
-                .panel-body
-                  .row
-                    %table.table.lights
-                      %tbody
-                        %tr
-                          %td
-                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
-                                    %span
-                                      NA
-                                    %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  H1 Oil Level
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  H2 System Operation
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Air filter restriction indicator
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  H3 Hydraulic Cylinders
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Turbo inspection
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  H4 Hoses / Lines
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Exhaust system
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  H5 Service Brakes
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Head gasket
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  H6 Parking Brake
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-            .row
-              .panel.panel-primary
-                .panel-heading ELEVATING SCRAPER
-                .panel-body
-                  .row
-                    %table.table.lights
-                      %tbody
-                        %tr
-                          %td
-                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
-                                    %span
-                                      NA
-                                    %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
                                 %span
-                                  S1 Hyd. Operation
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                                  Valve lash adjustment
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S2 Elevator Speeds
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Engine high and low idle speeds
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S3 Gear Box
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Oil leaks
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S4 Chains / Flights
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
                                 %span
-                                  S5 Sprockets / Idlers
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S6 Gate Rollers / Flr. Sliders
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                                  Engine oil filter
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+        .row
           .col
             .row
               .panel.panel-primary
-                .panel-heading DIESEL ENGINE
+                .panel-heading COOLING SYSTEM
                 .panel-body
                   .row
                     %table.table.lights
@@ -1268,375 +1043,1711 @@
                           %td
                             .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
                               .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
                                     %span
-                                      NA
+                                      Not OK
                                     %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D1 Oil Level
+                                      OK
                               .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D2 Oil Leaks
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Radiator cap
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D3 Coolant Level / Cond
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
                                 %span
-                                  D4 Radiator / Coolers
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D5 Cooling Sys. Leaks
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D6 Belts
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D7 Air Inlet System
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D8 Fuel System
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D9 Oil Pressure
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D10 Engine Performance
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  D11 Blow By
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                                  Radiator screens
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
 
-            .row
-              .panel.panel-primary
-                .panel-heading TRANSMISSION
-                .panel-body
-                  .row
-                    %table.table.lights
-                      %tbody
-                        %tr
-                          %td
-                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
-                                    %span
-                                      NA
-                                    %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  T1 Oil Level
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
                         %tr
                           %td
                             .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  T2 Oil Leaks
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
                                 %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
                                 %span
-                                  T3 Transmission Operation
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  T4 Clutch
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  T5 Str, Clutches / Brakes
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-            .row
-              .panel.panel-primary
-                .panel-heading AXLES / FINAL DRIVES
-                .panel-body
-                  .row
-                    %table.table.lights
-                      %tbody
-                        %tr
-                          %td
-                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
-                                    %span
-                                      NA
-                                    %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A1 Tires
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A2 Wheels / Bolts / Nuts
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A3 Front Axie inc. FWD
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A4 Rear Axie
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A5 Universal Joints
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A6 Differential Lock
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A7 Spindles / Tie Rods
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  A8 Final Drivers
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-            .row
-              .panel.panel-primary
-                .panel-heading EXCAVATOR
-                .panel-body
-                  .row
-                    %table.table.lights
-                      %tbody
-                        %tr
-                          %td
-                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
-                                    %span
-                                      NA
-                                    %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  X1 Swing Drive / Gear / Bearing
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  X2 Pump Drive
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-            / notes
-            .row
-              .panel.panel-primary
-                .panel-heading NOTES
-                .panel-body
-                  .row
-                    /%div{:style => 'height: 190px; width: 100%; background-image: url('{{}}');'}
-                    %img{'style'=>'width:205px;height:205px', 'ng-src'=>'{{ro.mpi_reports[0].diagram}}'}
+                                  Radiator
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
 
-    %div{"customer-ro-estimate" => "", "ro" => "ro", "hashy" => "hashy"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Hoses
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Pulleys and belts
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Water pump shaft play
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Coolant leaks
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Coolant level
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+        .row
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading FUEL SYSTEM
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      Not OK
+                                    %span
+                                      OK
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Tank and filters
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Sediment bowl
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Nozzles and lines
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Fuel shut-off operation
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Throttle level friction
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Make power check
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Fuel leaks
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+        .row
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading ELECTRICAL SYSTEM
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      Not OK
+                                    %span
+                                      OK
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Battery (Specify gravity)
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Baterry cables / ends
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Starter operation
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Neutral start switch adjustment
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Alternator charging
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Lights
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Gauges / indicator lights
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Wiring harness
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+        .row
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading STEERING AND BRAKES
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      Not OK
+                                    %span
+                                      OK
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Steering operation
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Steering cylinders and steering hoses
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Tie rod and dray link ends
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Front axle pivot bushings
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Front axle spindle bearings
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Brake operation
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Brake pedal adjustment
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Parking brake
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+        .row
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading HYDRAULIC SYSTEMS
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      Not OK
+                                    %span
+                                      OK
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Rockshaft
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Operation
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Cycle test
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Adjustments
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Draft sensing adjustment
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Selective control valve
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Operation
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Relief pressure
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Lines and clamps
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Leaks
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+        .row
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading MISCELLANEOUS
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      Not OK
+                                    %span
+                                      OK
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Seat
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Drawbar
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Frame and weights
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Sheet metal
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  PTO cover and shield
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  SMV sign
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Wheels and tires
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Front axle hardware torque
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Front wheel bearings
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Grease entire machine
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Safety decals
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  ROPS
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Seat belt
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+        .row
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading POWER TRAIN
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 57px; padding-top:5px; margin-left:5px"}
+                                    %span{"style"=>"font-weight:bold"}
+                                      Field Test
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:-15px"}
+                                      Component Description
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: 100px; padding-top:5px"}
+                                    %span{"style"=>"font-weight:bold; margin-left:15px"}
+                                      Customer Approval
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:0px"}
+                                  %div{"style"=>"width: auto"}
+                                    %span{"style"=>"font-weight:bold; margin-left:95px"}
+                                      Repair Section Comments
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:5px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      Not OK
+                                    %span
+                                      OK
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:115px"}
+                                  %div{"style"=>"width: auto; display: flex; justify-content: space-between"}
+                                    %span
+                                      By Phone
+                                    %span{"style"=>"margin-left:40px"}
+                                      By Initial
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Clutch free play
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  PTO clutch and brake
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Transmission operation
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Drive coupler
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Charge pump pressure
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Transmission to frame bolts
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Hydrostatic control pedals
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Differential lock
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Front differential-MFWD
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Final drives
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Axles-outer axl seal bearing
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Leaks
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Hydrostatic transmission oil / filter
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Transmission-hydraulic oil / filter
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Transmission beather cap
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
+
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                              .col-space{"style"=>"width: 200px; padding-top:0px"}
+                                %span
+                                  Transmission screen
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byphone', :type => 'text', :value => ''}/
+                              .col-space{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'byinitial', :type => 'text', :value => ''}/
+                              .col{"style"=>"width: 100px; padding-top:0px"}
+                                .form-group
+                                  %input.app-name{:name => 'comments', :type => 'text', :value => ''}/
