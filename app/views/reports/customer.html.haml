@@ -698,15 +698,15 @@
 
 %body
   %div#holder
-  //.wrapper
-  //  .row
-  //    .col-xs-1
-  //      %button.btn.btn-primary{"ng-click" => "savePDF()"}
-  //        %i.fa.fa-save
-  //        Save PDF
-  //      %button.btn.btn-primary{"ng-click" => "generatePDF()"}
-  //        %i.fa.fa-save
-  //        Gen PDF
+.wrapper
+  .row
+    .col-xs-1
+      %button.btn.btn-primary{"ng-click" => "savePDF()"}
+        %i.fa.fa-save
+        Save PDF
+      %button.btn.btn-primary{"ng-click" => "generatePDF()"}
+        %i.fa.fa-save
+        Gen PDF
   .wrapper#formConfirmation{"style"=>"background-color:#ffffff"}
     .container{'ng-repeat'=>'mpi in ro.mpi_reports'}
       %header.header
@@ -1163,93 +1163,6 @@
                               .col-space{"style"=>"width: 200px; padding-top:5px"}
                                 %span
                                   H6 Parking Brake
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-            .row
-              .panel.panel-primary
-                .panel-heading ELEVATING SCRAPER
-                .panel-body
-                  .row
-                    %table.table.lights
-                      %tbody
-                        %tr
-                          %td
-                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space
-                                %i{"style"=>"padding-top:3px; margin-left:95px"}
-                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
-                                    %span
-                                      NA
-                                    %span
-                                      O
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S1 Hyd. Operation
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S2 Elevator Speeds
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S3 Gear Box
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S4 Chains / Flights
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S5 Sprockets / Idlers
-                              .col-space
-                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
-                              .col-space
-                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
-                        %tr
-                          %td
-                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
-                              .col-space{"style"=>"width: 200px; padding-top:5px"}
-                                %span
-                                  S6 Gate Rollers / Flr. Sliders
                               .col-space
                                 %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
                               .col-space

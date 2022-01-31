@@ -1,0 +1,1642 @@
+:css
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url('./font/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .flex-row {
+    display: flex;
+  }
+
+  span.comment-block {
+    white-space: pre-line;
+    padding: 5px;
+  }
+  .container .row.comment-row {
+    justify-content: left;
+  }
+
+  .wrapper * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 6px;
+    line-height: 6px;
+    font-weight: 500;
+    text-align: left;car.png
+    color: #4e5c6f;
+  }
+
+  .wrapper {
+    width: 658px;
+    position: relative;
+    margin: 0 auto;
+    padding: 22px 30px;
+    border: none;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 7px;
+    font-weight: 500;
+    max-width: 568px;
+  }
+
+  header.header {
+    width: 568px;
+    height: 40px;
+    border: solid 1px #dae1ea;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .header img {
+    height: 34px;
+  }
+
+  header.sub-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+  }
+
+  header.sub-header h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    color: #4e5c6f;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 15px;
+    line-height: 16px;
+  }
+
+  header.sub-header h5 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: left;
+    color: #4e5c6f;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 15px;
+    line-height: 15px;
+  }
+
+  header.sub-header h5 + header.sub-header h7,
+  header.sub-header h7 {
+    margin-left: 6px;
+    text-transform: uppercase;
+  }
+
+  header.sub-header h7 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 6px;
+    font-weight: 500;
+    text-align: left;
+    color: #4e5c6f;
+    height: 15px;
+    line-height: 15px;
+  }
+
+  fieldset label {
+    font-weight: inherit;
+    margin: 0;
+  }
+
+  fieldset input {
+    border: none;
+    border-bottom: 1px solid #dae1ea;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 7px;
+    font-weight: 500;
+    color: #4e5c6f;
+    padding: 0;
+
+  }
+
+  .container .row {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container input {
+    border: none;
+    line-height: 6px;
+    height: 10px;
+    border-bottom: 1px solid #dae1ea;
+    width: 100%;
+  }
+
+  .sub-header {
+    justify-content: center;
+    display: flex;
+    flex: 1 0 auto;
+  }
+
+  .container .col {
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: column;
+  }
+
+  .container .col:first-of-type {
+    padding-right: 5px;
+  }
+  .container .col:not(:first-of-type) {
+    padding-left: 5px;
+  }
+
+  .container .form-group-sm.col {
+    flex-direction:row;
+  }
+
+  .container .form-group-sm {
+    display: flex;
+    align-content: space-between;
+    width: 100%;
+  }
+
+  .container .row > .form-group-sm:first-of-type,
+  .container .row > .form-group-sm > label:first-of-type:not(:last-of-type) {
+    padding-left: 0;
+    padding-right: 5px;
+  }
+
+  .container .row > .form-group-sm:last-of-type,
+  .container .row > .form-group-sm > label:first-of-type:not(:last-of-type) {
+    padding-right: 0;
+    padding-left: 5px;
+  }
+
+  .container .row > .form-group-sm:last-of-type:first-of-type {
+    padding: 0 5px;
+  }
+
+  .container .form-group-sm.col {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 50%;
+  }
+
+  .container .form-group-sm,
+  .container .form-group-sm * {
+    padding: 0 5px;
+  }
+
+  .container .form-group-sm label {
+    flex: 1 0 auto;
+    margin: 5px 0;
+    line-height: 5px;
+    text-transform: uppercase;
+  }
+
+  .legend {
+    width: 568px;
+    height: 22px;
+    border: solid 1px #dae1ea;
+    margin: 0 0 2px 0;
+  }
+
+  .legend .col-xs-4 {
+    display: flex;
+    /*margin-right: 2px;*/
+    padding: 5px;
+    justify-content: center;
+  }
+
+  .container .panel-primary .panel-body {
+    padding: 0;
+  }
+
+  .container .panel.comments, .container .panel.comments .panel-body {
+    border: none;
+    box-shadow: none;
+  }
+
+  .container .panel.comments .row > .form-group-sm:last-of-type:first-of-type {
+    padding: 0;
+    margin-left: -5px;
+  }
+
+  .container .panel-primary .col-xs-4, .container .panel-primary .col {
+    padding: 2px;
+  }
+
+  .container .inspect-disclaimer {
+    line-height: 12px;
+  }
+
+  .legend .col-xs-4:last-of-type, .container .panel-primary .col:last-of-type {
+    margin-right: 0;
+  }
+
+  .legend span {
+    padding: 0 2px;
+    flex: 1 1 auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 7px;
+    font-weight: 500;
+    text-align: left;
+    color: #4e5c6f;
+    line-height: 10px;
+  }
+
+  .col-center i.status {
+    display: flex;
+    align-self: center;
+  }
+
+  .legend .going-green {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .legend .going-green span {
+    flex: initial;
+  }
+
+  .container .green {
+    background-color: #5cc7a3;
+  }
+
+  .container .yellow {
+    background-color: #fdd927;
+  }
+
+  .container .red {
+    background-color: #fd275d;
+  }
+
+  .container .sm-red-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: #fd275d;
+    border: solid 1px #dadde6;
+    display:flex;
+  }
+
+
+  .container .sm-yellow-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    border: solid 1px #dadde6;
+    background-color: #fdd927;
+  }
+
+  .container .sm-green-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: #5cc7a3;
+    border: solid 1px #dadde6;
+  }
+
+  i.status.complete:before{
+    margin-left:-3px !important;
+    color: #ffffff;
+    font-size: 6px;
+    font-family: "FontAwesome";
+    font: normal normal normal 6px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f00c";
+  }
+
+  .status {
+    width: 12px !important;
+    height: 12px !important;;
+    max-width: 12px !important;;
+    max-height: 12px !important;;
+    line-height: 12px;
+    padding: 2px !important;
+    border-radius: 100px;
+    border: solid 1px #dadde6;
+    background-color: #ffffff;
+    display: flex;
+    flex: 1 0 auto;
+    margin-right: 5px;
+    justify-self: center;
+    align-self: center;
+  }
+
+
+  -# TODO Delete me
+  .status.completed-check:before
+    color: #ffffff;
+    line-height: 12px;
+    height: 12px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    width: 12px;
+    max-width: 12px;
+    min-width: 12px;
+    max-height: 12px;
+    vertical-align: middle;
+    position: relative;
+    display: flex;
+    left: -1px;
+  }
+
+  .status + *,
+  .sm-status + * {
+    display: flex;
+    flex: 1 1 auto;
+    margin-right: 1px;
+  }
+
+  .container .panel {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #dae1ea;
+    width: 100%;
+  }
+
+  .container .panel-heading {
+    padding: 0 5px;
+    border-radius: 0;
+    /*border: 1px solid #327AB9;*/
+    border-bottom: none;
+    text-align: center;
+    font-size: 6px;
+    text-transform: uppercase;
+    height: 15px;
+    line-height: 15px;
+  }
+
+  .container .panel-primary {
+    margin-bottom: 15px;
+  }
+
+
+  .container .panel-primary .panel-heading {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+  }
+
+  .container table.lights td:last-child {
+    vertical-align: middle;
+    border-left: 1px solid #dae1ea;
+  }
+
+  .container .checkbox label {
+    min-height: initial;
+    min-width: 12px;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f8f9fa;
+    border: solid 1px #dae1ea;
+  }
+
+  .checkbox label:after {
+    content: '';
+    width: 11px;
+    height: 5px;
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    zoom: 75%;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .checkbox label:hover::after {
+    opacity: 0.5;
+  }
+
+  .checkbox input[type=checkbox] {
+    visibility: hidden;
+  }
+
+  .checkbox input[type=checkbox]:checked + label:after {
+    opacity: 1;
+  }
+
+  .container table {
+    margin-bottom: 0;
+  }
+
+  .container table > tbody > tr > td > span {
+    padding: 3px;
+    margin: 0;
+    display: flex;
+  }
+
+  .container table > tbody > tr {
+    border-top: 1px solid #dae1ea;
+    border-bottom: 1px solid #dae1ea;
+  }
+
+  .container table > tbody > tr > td {
+    min-height: 16px;
+    height: 16px;
+    border: none !important;
+  }
+
+  .container table > tbody > tr > td .col span {
+    line-height: 12px;
+    margin-left: 2px;
+  }
+
+  .container table > tbody > tr > td, .container table > tbody > tr > td * {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    max-height: 16px;
+    height: 16px;
+  }
+
+  .container table > tbody > tr.double > td, .container table > tbody > tr.double > td * {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    height: initial;
+    min-height: 12px;
+    max-height:25px;
+  }
+
+  .container table > tbody > tr.tripple > td, .container table > tbody > tr.tripple > td * {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    height: initial;
+    min-height: 12px;
+    max-height: 36px;
+  }
+
+  .container table > tbody > tr.double > td, .container table > tbody > tr.tripple > td {
+    display: flex;
+    flex-direction:column;
+  }
+
+  .container table > tbody > tr.double .col-xs-4, .container table > tbody > tr.tripple .col-xs-4 {
+    padding: 0 2px;
+  }
+
+  .container table > tbody > tr.double .row span, .container table > tbody > tr.tripple .row span {
+    line-height: 12px;
+    margin-left: 3.5px;
+  }
+
+  .col-space {
+    display: flex;
+  }
+
+  .container table > tbody > tr > td .col-space *:not(:first-child) {
+    line-height: 16px;
+    margin-left: 4px;
+    margin-right: 3px;
+  }
+
+  .container table > tbody > tr > td .col-space:last-of-type {
+    margin-left: 5px;
+    flex: 1 1 100%;
+    justify-content: space-between;
+  }
+
+  .container table > tbody > tr > td .col-space:last-of-type span {
+    line-height: 16px;
+  }
+
+  .container table > tbody > tr > td .col-space {
+    padding-left: 3px;
+  }
+
+  tr.double, tr.tripple {
+    min-height:35px;
+  }
+
+  tr.double .row, tr.tripple .row {
+    justify-content: flex-start;
+  }
+
+  tr.double .row .col-xs-4 i, tr.tripple .row .col-xs-4 i {
+    width: 8px;
+    max-width:8px;
+    min-width:8px;
+    height:8px;
+    max-height:8px;
+    min-height:8px;
+    align-self: center;
+  }
+
+  tr.double .row .col-xs-4 > .row > span, tr.tripple .row .col-xs-4 > .row > span {
+    line-height: 16px;
+  }
+
+  .panel-primary .panel-heading + .panel-primary .panel-heading {
+    display: flex;
+    width: 50%;
+    flex: 1 0 50%;
+  }
+
+  .panel-primary .row .col-xs-6 {
+    display: flex;
+    padding: 0;
+    background-color: #337ab7;
+    color: #FFFFFF;
+  }
+
+  .panel-primary .row .col-xs-6:last-of-type {
+    justify-content: flex-end;
+  }
+
+  .col-xs-8 .col-center:first-of-type {
+    justify-content: flex-end;
+  }
+
+  .col-xs-8 .col-center:not(:first-of-type):not(:last-of-type) {
+    justify-content: center;
+  }
+
+  .legend .row .col-xs-4:first-of-type {
+    justify-content: flex-start;
+  }
+
+  .legend .row .col-xs-4:last-of-type {
+    justify-content: flex-end;
+  }
+
+  .col-center {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    height: 17px;
+    line-height: 17px;
+    min-height: initial;
+    max-height: initial;
+    padding: 0;
+    margin: 0;
+  }
+
+  .col-center i.status {
+    display: flex;
+    align-self: center;
+  }
+
+  .sync {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container .sync .col-center {
+    margin: 0 10px;
+  }
+
+  .container .sync .col-center .row {
+    align-items: center;
+  }
+
+  .container .col-center+.col-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+  }
+
+  .container .col-center .col-center {
+    margin: 0 3px;
+  }
+
+  .container .comments .table tr {
+    border-left: 0;
+    border-right: 0;
+    height: 20px;
+  }
+
+  .container .comments .table {
+    margin-bottom: 20px;
+  }
+
+  .wrapper .container header .row {
+    height: 40px;
+  }
+
+  .wrapper .container header h1 {
+    color: #fd275d;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+  }
+
+  .wrapper .container header h2 {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    text-align: left;
+    color: #4e5c6f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .wrapper .container header .col-xs-4, .wrapper .container header .col-xs-4 h1, .wrapper .container header .col-xs-4 h2 {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper .container header .col-xs-4:first-of-type h1, .wrapper .container header .col-xs-4:first-of-type h2 {
+    align-self: flex-start;
+  }
+
+   .wrapper .container header .col-xs-4:last-of-type h1, .wrapper .container header .col-xs-4:last-of-type h2 {
+    align-self: flex-end;
+  }
+:css
+  .fa-check:before{
+    margin-left:-3px !important;
+    color: #ffffff;
+  }
+  #formConfirmation{
+  padding-top:2px;
+  padding-bottom: 0px;
+
+  }
+  @media print {
+    html, body {
+      height:auto;
+      width:auto;
+
+    }
+
+  }
+
+%body
+  %div#holder
+  .wrapper
+    .row
+      .col-xs-1
+        %button.btn.btn-primary{"ng-click" => "savePDF()"}
+          %i.fa.fa-save
+          Save PDF
+        %button.btn.btn-primary{"ng-click" => "generatePDF()"}
+          %i.fa.fa-save
+          Gen PDF
+  .wrapper#formConfirmation{"style"=>"background-color:#ffffff"}
+    .container{'ng-repeat'=>'mpi in ro.mpi_reports'}
+      %header.header
+        %img{'ng-src'=>'{{ro.dealer.dealer_logo}}', "crossorigin"=>"anonymous"}
+      %header.sub-header
+        %h3 Rivers Equipment, LLC Ready-To-Run inspection Report
+        .flex-row
+          %h5 {{ro.dealer.dba}}
+      / address begin
+      .container
+        .row
+          .form-group-sm.col
+            %label{:for => 'date'} Date:
+            %input.app-name{:name => 'date', :type => 'text', :value => ''}/
+          .form-group-sm.col
+            %label{:for => 'manufacter-model'} Manufacter Model:
+            %input.app-ro-num{:name => 'manufacter-model', :type => 'text', :value => ''}/
+        .row
+          .form-group-sm.col
+            %label{:for => 'customer'} Customer:
+            %input.app-name{:name => 'customer', :type => 'text', :value => '{{ro.customer.name}}'}/
+          .form-group-sm.col
+            %label{:for => 'serial-number'} Serial Number:
+            %input.app-ro-num{:name => 'serial-number', :type => 'text', :value => ''}/
+          .form-group-sm.col
+            %label{:for => 'hours'} Hours:
+            %input.app-ro-num{:name => 'hours', :type => 'text', :value => ''}/
+        .row{"style"=>"width: 300px; padding-top:5px"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              PM Due:
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Unkown
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              None required
+        .row{"style"=>"width: 300px; padding-top:5px"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Undercarriage:
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Good
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Fair
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Poor
+        .row{"style"=>"width: 300px; padding-top:5px"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Track Sag:
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Good
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Loose / Tight
+        .row{"style"=>"width: 300px; padding-top:5px"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Leaks:
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Track / Carrier Roller
+          .col-space
+            %i.status{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+          .col-space{"style"=>"width: 100px; padding-top:5px"}
+            %span
+              Track Seals
+          -# .form-group-sm.col
+          -#   %label{:for => 'key-trac'} RO #:
+          -#   %input.app-ro-num{:name => 'key-trac', :type => 'text', :value => '{{ro.dms_unique_id}}'}/
+        -# .row
+        -#   .form-group-sm.col
+        -#     %label{:for => 'model'} Make/Model:
+        -#     %input.app-make-model{:name => 'model', :type => 'text', :value => '{{ro.vehicle.make}} {{ro.vehicle.model}}'}/
+        -#   .form-group-sm.col
+        -#     %label{:for => 'year'} Year:
+        -#     %input.app-year{:name => 'year', :type => 'text', :value => '{{ro.vehicle.year}}'}/
+        -#   .form-group-sm.col
+        -#     %label{:for => 'milage'} Mileage:
+        -#     %input.app-mileage{:name => 'milage', :type => 'text', :value => '{{ro.vehicle.mileage}}'}/
+        -#   .form-group-sm.col
+        -#     %label{:for => 'hat'} Hat #:
+        -#     %input{:name => 'hat', :type => 'text'}/
+        -#   .form-group-sm.col
+        -#     %label{:for => 'vin'} VIN:
+        -#     %input.app-vin{:name => 'vin', :type => 'text', :value => '{{ro.vehicle.vin}}'}/
+      / address end
+      / legend
+      .legend
+        .row
+          .col-xs-4
+            .row
+              %i.status.red.fa.fa-check
+              %span NA = Needs Attention
+          .col-xs-4
+            .row
+              %i.status.yellow
+              %span Not Applicable
+          .col-xs-4
+            .row
+              %i.status.green
+              %span O = Passed
+      / end legend
+      .container
+        .row
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading GENERAL
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G1 Sheet Metal
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G2 Doors
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G3 Glass Mirros
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G4 Operator's Station
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G5 Seat Belt
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G7 ROPS / FOPS
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G8 Bucket(s) / Blade
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G9 Cutting Edge / Teeth
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G10 Articulation Joint
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  G11 Machine PM'd properly?
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+
+            .row
+              .panel.panel-primary
+                .panel-heading ELECTRICAL
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E1 Battery Condition
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E2 Cables / Harnesses
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E3 Starter/Safety Cover
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E4 Neutral Start
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E5 Charging System
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E6 Gauges
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E7 Backup Alarm
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  E8 Lights / Turns Signals
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+
+            .row
+              .panel.panel-primary
+                .panel-heading HYDRAULIC SYSTEM
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  H1 Oil Level
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  H2 System Operation
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  H3 Hydraulic Cylinders
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  H4 Hoses / Lines
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  H5 Service Brakes
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  H6 Parking Brake
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+            .row
+              .panel.panel-primary
+                .panel-heading ELEVATING SCRAPER
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  S1 Hyd. Operation
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  S2 Elevator Speeds
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  S3 Gear Box
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  S4 Chains / Flights
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  S5 Sprockets / Idlers
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  S6 Gate Rollers / Flr. Sliders
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+          .col
+            .row
+              .panel.panel-primary
+                .panel-heading DIESEL ENGINE
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D1 Oil Level
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D2 Oil Leaks
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D3 Coolant Level / Cond
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D4 Radiator / Coolers
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D5 Cooling Sys. Leaks
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D6 Belts
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D7 Air Inlet System
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D8 Fuel System
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D9 Oil Pressure
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D10 Engine Performance
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  D11 Blow By
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+
+            .row
+              .panel.panel-primary
+                .panel-heading TRANSMISSION
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  T1 Oil Level
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  T2 Oil Leaks
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  T3 Transmission Operation
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  T4 Clutch
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  T5 Str, Clutches / Brakes
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+            .row
+              .panel.panel-primary
+                .panel-heading AXLES / FINAL DRIVES
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A1 Tires
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A2 Wheels / Bolts / Nuts
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A3 Front Axie inc. FWD
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A4 Rear Axie
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A5 Universal Joints
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A6 Differential Lock
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A7 Spindles / Tie Rods
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  A8 Final Drivers
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+            .row
+              .panel.panel-primary
+                .panel-heading EXCAVATOR
+                .panel-body
+                  .row
+                    %table.table.lights
+                      %tbody
+                        %tr
+                          %td
+                            .row{ "ng-show"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space
+                                %i{"style"=>"padding-top:3px; margin-left:95px"}
+                                  %div{"style"=>"width: 57px; display: flex; justify-content: space-between"}
+                                    %span
+                                      NA
+                                    %span
+                                      O
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  X1 Swing Drive / Gear / Bearing
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+                        %tr
+                          %td
+                            .row{ "ng-hide"=>"mpi_item_na(groupFluids, descOilCondition).indexOf('complete') > 0"}
+                              .col-space{"style"=>"width: 200px; padding-top:5px"}
+                                %span
+                                  X2 Pump Drive
+                              .col-space
+                                %i.status.red{ "ng-class"=>"mpi_item_bad(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.yellow{ "ng-class"=>"mpi_item_warning(groupFluids, descOilCondition)"}
+                              .col-space
+                                %i.status.green{ "ng-class"=>"mpi_item_good(groupFluids, descOilCondition)"}
+            / notes
+            .row
+              .panel.panel-primary
+                .panel-heading NOTES
+                .panel-body
+                  .row
+                    /%div{:style => 'height: 190px; width: 100%; background-image: url('{{}}');'}
+                    %img{'style'=>'width:205px;height:205px', 'ng-src'=>'{{ro.mpi_reports[0].diagram}}'}
+
+    %div{"customer-ro-estimate" => "", "ro" => "ro", "hashy" => "hashy"}
